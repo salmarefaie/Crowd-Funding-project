@@ -2,7 +2,6 @@
 ## 1. login and register
 ```
 	1. get and edit profile
-	
 ```
 ## 2. make a fund & create a project Auth.
 ## 3. make a fund application
