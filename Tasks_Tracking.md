@@ -1,5 +1,5 @@
 # Crowd Funding Website
-## 1. login and register
+## 1. login and register [Mohamed Mamdouh]
 ```
 	1. get and edit profile
 ```
