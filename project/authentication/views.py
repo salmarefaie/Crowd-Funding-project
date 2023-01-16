@@ -20,3 +20,6 @@ def registerPage(request):
 def loginPage(request):
     context = {}
     return render(request, 'login.html')
+def index(request):
+    context = {}
+    return render(request, 'index.html')
