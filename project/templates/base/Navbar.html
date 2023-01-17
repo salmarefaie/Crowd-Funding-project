@@ -1,5 +1,12 @@
 {% load static %}
+<style>
+  .hello-msg{
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+  }
 
+</style>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <img src="{% static 'images/logos/iti-logo.png' %}" width="30">
@@ -22,6 +29,6 @@
       </ul>
     </div>
 
-    <span>Hello, {{user}}</span>
-    <span><a href={% url 'authentication:login' %}>Logout</a></span>
+    <span class="hello-msg">Hello, {{user}}</span>
+    <span><a class="hello-msg" href={% url 'authentication:logout' %}>Logout</a></span>
   </nav>

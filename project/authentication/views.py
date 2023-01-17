@@ -7,7 +7,9 @@ from .forms import OrderForm , CreateUserForm
 from django.contrib.auth import authenticate ,login , logout
 
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url='login')
 def registerPage(request):
     form = CreateUserForm()
     context = {"form":form}
@@ -30,7 +32,7 @@ def loginPage(request):
         username=request.POST.get('username')
         password=request.POST.get('password')
         
-        user = authenticate(request, username=username, password=password )
+        user = authenticate(username=username, password=password )
         if user is not None:
             login(request,user)
             return redirect('authentication:home')
@@ -42,11 +44,12 @@ def loginPage(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('Auth/login.html')
+    
+    return redirect('authentication:login')
 
 
-
-
+@login_required(login_url='authentication:login')
 def index(request):
     context = {}
+   
     return render(request, 'index.html')
