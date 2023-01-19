@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate ,login , logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def registerPage(request):
     form = CreateUserForm()
     context = {"form":form}
