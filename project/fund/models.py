@@ -6,6 +6,6 @@ class fund(models.Model):
     useremail = models.CharField(max_length=50 , verbose_name="user email")
 
     def __str__(self):
-        return self.name
+        return self.username
     class Meta:
         verbose_name= "fund information"
