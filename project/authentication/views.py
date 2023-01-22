@@ -41,14 +41,14 @@ def loginPage(request):
             return render(request, 'Auth/login.html')
 
     return render(request, 'Auth/login.html')
-
+@login_required(login_url='login')
 def logoutUser(request):
     logout(request)
     
     return redirect('authentication:login')
 
 
-@login_required(login_url='authentication:login')
+# @login_required(login_url='authentication:login')
 def index(request):
     context = {}
    
