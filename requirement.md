@@ -12,3 +12,4 @@ $python -m pip install Pillow
 ```
 ## To install 
 - Pillow==9.4.0
+
