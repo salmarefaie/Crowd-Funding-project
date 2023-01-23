@@ -6,7 +6,6 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 # show all projects
-
 def viewProjects(request):
     return render(request, 'projectApp/projects.html', {"projects":project.objects.all()})
 
@@ -28,7 +27,10 @@ def deleteProject  (request,id):
 def createProject(request):
     project = project_form(request.POST, request.FILES)
     if project.is_valid():
-        project.save() 
+        userID = project.save(commit=False) 
+        userID.user = request.user
+        userID.save()
+        project.save()
     else :
         print("not valid")
     return render(request,'projectApp/createProject.html',{"form":project_form})
@@ -44,3 +46,8 @@ def editProject (request,id):
     else :
         print("not valid")
     return render(request,'projectApp/editProject.html',{"project" : project_id,"form":form}) 
+
+# show user projects
+def userProjects (request):
+    project= project.objects.filter(user=request.user.id).values()
+    return render(request,'pages/showUserProjects.html',{"projects": project})

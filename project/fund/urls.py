@@ -5,5 +5,4 @@ urlpatterns = [
     path('fundpage/' , views.fundpage , name="fundpage"),
     path('fundpage/confirmationpage' , views.confirmationpage , name="confirmationpage"),
 
-    
 ]
