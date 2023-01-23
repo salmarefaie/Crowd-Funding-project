@@ -11,7 +11,7 @@ from django.contrib.auth.decorators import login_required
 def confirmationpage(request):
     return render (request , 'fund/confirmationpage.html', {"fund":fund.objects.all().order_by('username')})
 
-def createProject(request):
+def CreateFund(request):
     fund = fund_form(request.POST, request.FILES)
     if fund.is_valid():
         userID = fund.save(commit=False) 

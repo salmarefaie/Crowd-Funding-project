@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path('entrypage/confirmationpage' , views.confirmationpage , name="confirmationpage"),
-    path('entrypage/' , views.createProject , name="entrypage"),
+    path('entrypage/' , views.CreateFund , name="entrypage"),
 
 
 ]
