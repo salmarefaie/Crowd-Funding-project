@@ -13,7 +13,7 @@ class project(models.Model):
     target_launch_date = models.DateField(null=True, blank=True)
     create_project_date = models.DateTimeField(default=datetime.now)
     total_fund = models.IntegerField(default=0)
- 
+    user = models.ForeignKey(User, default=None,null=True, on_delete=models.CASCADE)
     def __str__(self):
         return self.name
 

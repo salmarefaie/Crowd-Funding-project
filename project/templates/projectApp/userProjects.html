@@ -31,9 +31,14 @@
                 </div><!-- / project-info-box -->
                 
                 <div class="d-flex">
+                  {% if project.id %}
+                  <button class="btn" id="show1"> <a href="{% url 'projects:editProject' project.id %}"> Update </a> </button>
+                  {% endif %}
+                 
+
+
+                  
                 
-                  <button class="btn" id="show1"> <a href="{% url 'editProject' %}"> Update </a> </button>
-                  <button class="btn" id="show2"><a href="{% url 'editProject' %}">Delete</a></button>
                  
                 </div>
             </div><!-- / column --> 
