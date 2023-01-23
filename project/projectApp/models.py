@@ -10,7 +10,7 @@ class project(models.Model):
     funding_goal = models.DecimalField(max_digits=10, decimal_places=2)
     target_launch_date = models.DateField(null=True, blank=True)
     create_project_date = models.DateTimeField(default=datetime.now)
-    
+    total_fund = models.IntegerField(default=0)
     def __str__(self):
         return self.name
 

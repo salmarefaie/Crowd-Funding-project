@@ -5,3 +5,4 @@ class project_form(forms.ModelForm):
     class Meta:
         model = project 
         fields = '__all__' 
+        exclude = ['total_fund']

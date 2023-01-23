@@ -6,3 +6,4 @@ urlpatterns = [
     path('fundpage/confirmationpage' , views.confirmationpage , name="confirmationpage"),
 
 ]
+app_name = 'fund'
