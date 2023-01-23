@@ -2,8 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('fundpage/' , views.fundpage , name="fundpage"),
-    path('fundpage/confirmationpage' , views.confirmationpage , name="confirmationpage"),
+    path('entrypage/confirmationpage' , views.confirmationpage , name="confirmationpage"),
+    path('entrypage/' , views.createProject , name="entrypage"),
+
 
 ]
 app_name = 'fund'
