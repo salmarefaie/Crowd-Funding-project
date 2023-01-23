@@ -1,36 +1,41 @@
-<style>
-  
-    body {
-      background-color: #DBF9FC;
-      height: 125vh;  
-  margin-top: 80px;  
-  padding: 30px;  
-  background-size: cover;  
-  font-family: sans-serif;  
-      }
-  
+
+{% load static %}
+
+<html>
+  <head>
+   
+    <link rel="stylesheet" href="{% static 'css\projectApp\create_edit.css' %}">
+  </head>
+  <style>
+    .txt{
+        position: relative;
+    left: 30%;
+    font-size: 24px;
+    }
+    input{
+        margin:auto 40px;
+    }
   </style>
-  
+  <body>
 
-
-
-  
-<h1> <b> <center>Funding projects</center> </b> </h1>
-<br>
-<br>
-<h3> <i> Please enter the data of your fund  </i></h3>
-<br>
-<br>
-<form action="" method="POST" enctype="multipart/form-data"> 
-    {% csrf_token %} {{form.as_p}}
+    <h1> <b> <center>Funding projects</center> </b> </h1>
     <br>
     <br>
-    <button type="submit">Save</button>
+    <h3> <i class="txt"> Please enter the data of your fund  </i></h3>
     <br>
     <br>
-    <Br>
-    <div class="donate-button" onclick="window.location.href = 'confirmationpage';"> Click here to continue! </div>
-
-<form action="addfund/" method="post">
-{% csrf_token %}
-
+    <form action="" method="POST" enctype="multipart/form-data"> 
+        {% csrf_token %} {{form.as_p}}
+        <br>
+        <br>
+        <button type="submit">Save</button>
+        <br>
+        <br>
+        <Br>
+        <div class="donate-button" onclick="window.location.href = 'confirmationpage';"> Click here to continue! </div>
+    
+    <form action="addfund/" method="post">
+    {% csrf_token %}
+ 
+</body>
+</html>

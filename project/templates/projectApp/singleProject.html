@@ -24,15 +24,16 @@
                 <img src="{{project.image.url}}"  alt="project-image" class="rounded">
                 <div class="project-info-box">
                     <p><b>Country:</b> {{project.country}}</p>
+                    <p><b>Current Fund:</b> {{project.total_fund}}</p>
                     <p><b>Funding Goal:</b> {{project.funding_goal}}</p>
                     <p><b>Target Launch Date:</b> {{project.target_launch_date}}</p>
                     <p><b>Create Project Date:</b> {{project.create_project_date}}</p>
                 </div><!-- / project-info-box -->
                 
                 <div class="d-flex">
-                <a href="{% url 'fund:fundpage' %}"> 
-                  <button class="btn" id="show1">Fund</button>
-               </a> 
+                
+                  <button class="btn" id="show1"> <a href="{% url 'fund:entrypage' %}">  Fund </a> </button>
+               
                   <!-- <button class="btn" id="show2">Update</button>
                   <button class="btn " id="show3">Delete</button> -->
                 </div>

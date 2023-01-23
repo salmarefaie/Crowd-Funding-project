@@ -98,35 +98,23 @@ b, strong {
     color: rgb(226, 214, 214);
     width: 34%;
     font-size: 22px;
+    margin-bottom: 20px;
   }
 
-  #show2{
-    background-color: rgb(3, 88, 88);
-    border: none;
-    color: rgb(226, 214, 214);
-  }
 
-  #show3{
-    background-color: rgb(3, 88, 88);
-    border: none;
-    color: rgb(226, 214, 214);
-  }
-
-  a#show1:hover{
+ #show1:hover{
     background-color: rgb(2, 65, 65);
     border: none;
     color: rgb(226, 214, 214);
    
   }
-
-  a#show2:hover{
-    background-color: rgb(2, 65, 65);
-    border: none;
+  #show1 a{
     color: rgb(226, 214, 214);
+  
   }
 
-  a#show3:hover{
-    background-color: rgb(2, 65, 65);
-    border: none;
-    color: rgb(226, 214, 214);
+  #show1 a:hover{
+    text-decoration: none;
   }
+
+

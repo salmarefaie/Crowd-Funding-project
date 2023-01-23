@@ -14,6 +14,11 @@ def viewSingleProject (request,id):
     singleProject= project.objects.get(pk = id)
     return render(request,'projectApp/singleProject.html',{"project":singleProject})
 
+# show user projects
+def userProjects (request):
+    userprojects= project.objects.filter(user=request.user.id).values()
+    return render(request,'projectApp/userProjects.html',{"projects": userprojects})
+
 # delete project
 @login_required(login_url='authentication:login')
 def deleteProject  (request,id):
@@ -47,7 +52,3 @@ def editProject (request,id):
         print("not valid")
     return render(request,'projectApp/editProject.html',{"project" : project_id,"form":form}) 
 
-# show user projects
-def userProjects (request):
-    project= project.objects.filter(user=request.user.id).values()
-    return render(request,'pages/showUserProjects.html',{"projects": project})

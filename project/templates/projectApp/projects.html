@@ -18,12 +18,13 @@
                   <p>{{ele.small_description}}</p>
               </div>
               <div class="project-info-box mb-10">
+                  <p><b>Current Fund:</b> {{ele.total_fund}}</p>
                   <p><b>Funding Goal:</b> {{ele.funding_goal}}</p>
                   <p><b>Project Post Date:</b> {{ele.create_project_date}}</p>
               </div>
-              <!-- / project-info-box -->
+        
   
-              <a href="{% url 'viewSingleProject' ele.id %}" class="btn d-block" id="show">SHOW PROJECT</a>
+              <a href="{% url 'projects:viewSingleProject' ele.id %}" class="btn d-block" id="show">SHOW PROJECT</a>
           </div>
           <!-- / column -->
       </div>

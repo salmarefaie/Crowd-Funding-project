@@ -1,18 +1,16 @@
-<style>
-    input{
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-       
-    }
- 
-</style>
-<head><center>Create Your Own project</center></head>
+{% load static %}
+<html>
+  <head>
+   
+    <link rel="stylesheet" href="{% static 'css\projectApp\create_edit.css' %}">
+  </head>
+  <body>
+
+<h1><center>Create Your Own Project</center></h1>
 <form action="" method="POST" enctype="multipart/form-data"> 
     {% csrf_token %} {{form.as_p}}
-    <button type="submit">Save</button>
+    <button type="submit">Create</button>
 </form>
+ 
+</body>
+</html>

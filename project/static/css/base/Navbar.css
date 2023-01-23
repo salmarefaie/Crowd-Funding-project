@@ -1,0 +1,31 @@
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index:9999;
+}
+.container1 {
+    background-color: black;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.a1 {
+    float: left;
+    font-size:30px;
+}
+
+.ul {
+    color: aliceblue;
+    padding-left: 3%;
+    float: right;
+    list-style: none;
+    width:42%;
+}
+
+.t3 {
+    color: aliceblue;
+    font-family:cursive;
+}
+
+
